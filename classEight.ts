@@ -42,7 +42,18 @@ class Circle extends Shape{
 }
 
 class Rectangle extends Shape{
+    height: number;
+    weight: number;
+    constructor(height: number, weight: number){
+        super()
+        this.height= height
+        this.weight = weight
+    }
     getArea(): number {
-        
+        return this.height * this.weight
     }
 }
+const rectangle = new Rectangle(22,33)
+console.log(rectangle.getArea());
+const circle = new Circle(20)
+console.log(circle.getArea());
